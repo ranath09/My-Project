@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rana Juli</title>
+    <title> Parallax Website </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,600&family=Kalam:wght@700&family=Lato:wght@300&family=MuseoModerno:wght@300;500&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <h1>Hello Everyone</h1>
-    <p>We are start to learning git and github</p>
+    <section>
+        <img src="img/first.jpg" id="frist">
+        <img src="img/last.png" id="last">
+        <h1 id="text">Parallax</h1>
+    </section>
+
+    <div class="ab-text">
+        <div class="heading">
+            <h2> Photography </h2>
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique rem error minima ea in, sint hic
+                illum.<br>   Ea laboriosam totam atque quia aliquid! Illo dolor nobis sed eius quo ut. </p>
+        </div>
+
+        <div class="container">
+            <div class="box box1">
+                <div class="in">
+                    <p>Like</p>
+                </div>
+            </div>
+
+            <div class="box box2">
+                <div class="in">
+                    <p>Comment</p>
+                </div>
+            </div>
+
+            <div class="box box3">
+                <div class="in">
+                    <p>Share&</p>
+                </div>
+            </div>
+
+            <div class="box box4">
+                <div class="in">
+                    <p>Subscribe</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bottom">
+            <p>@ 2023. Design with by RANA </p>
+        </div>
+
+    </div>
+
+
+    <script>
+        let first = document.getElementById("first");
+        let last = document.getElementById("last");
+        let text = document.getElementById("text");
+
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+
+            frist.style.top = value * 0.7 + 'px';
+            last.style.bottom = value * 0.5 + 'px';
+            text.style.top = value * 1 + 'px';
+        })        
+    </script>
+
 </body>
+
 </html>
